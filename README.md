@@ -11,7 +11,7 @@ I did this on macOS rather than Windows, so some steps differ from the course gu
 ## Project Objectives ## 
 The main objectives of this lab are to:
 - Build an isolated lab for practising cybersecurity tools safely.
-- Create a private NAT Network that future target machines can join.
+- Create a private NAT Network for future target machines to connect to.
 - Assign Kali a fixed IP address with full internet access.
 - Enable file sharing and clipboard between the Mac and Kali.
 - Save a clean snapshot as a recovery point.
