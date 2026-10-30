@@ -1,4 +1,4 @@
-# Cybersecurity Lab Environment Setup
+# Cybersecurity Lab Environment Setup on MacOS
 
 ## Project Overview
 
@@ -56,7 +56,8 @@ In VirtualBox: **File > Tools > Network Manager > NAT Networks > Create**
 
 VirtualBox gave the new network a default prefix of 10.0.2.0/24, so I changed it to 10.0.0.0/24 and clicked **Apply**.
 
-📸 *[Screenshot: NAT Network list showing NatNetwork, 10.0.0.0/24, Enabled]*
+<img width="1437" height="827" alt="1-nat-network" src="https://github.com/user-attachments/assets/59254789-56ed-43fb-b1b4-135f2ea23a59" />
+
 
 ## VM Settings for Kali
 
@@ -73,13 +74,15 @@ With Kali powered off, I opened **Settings** and configured the following.
 
 Promiscuous Mode is set to **Allow All** so Kali can see all traffic on the lab network for future sniffing exercises.
 
-📸 *[Screenshot: Kali network adapter settings]*
+<img width="1439" height="829" alt="2-kali-network" src="https://github.com/user-attachments/assets/10e1997f-b5e6-4591-8564-9e3decff5af5" />
+
 
 ### Clipboard and Drag & Drop
 
 **General > Features:** Shared Clipboard and Drag-and-Drop both set to **Bidirectional**.
 
-📸 *[Screenshot: General > Features]*
+<img width="1440" height="832" alt="3-clipboard" src="https://github.com/user-attachments/assets/1b4e97d4-4792-4320-a72c-2bfa67555143" />
+
 
 ### Shared Folder
 
@@ -93,7 +96,8 @@ Promiscuous Mode is set to **Allow All** so Kali can see all traffic on the lab 
 | Make Global | Yes |
 | Access | Full |
 
-📸 *[Screenshot: Shared Folders list]*
+<img width="1440" height="829" alt="4-shared-folder" src="https://github.com/user-attachments/assets/4e7996e0-11c1-4c82-a63a-4dc3aad76d54" />
+
 
 ## Step 5: Configure Kali's IP Address
 
@@ -120,7 +124,8 @@ sudo nmcli connection up "Wired connection 1"
 
 `ip a` then showed `inet 10.0.0.2/24` on eth0.
 
-📸 *[Screenshot: ip a showing 10.0.0.2/24]*
+<img width="1435" height="829" alt="5-ip-address" src="https://github.com/user-attachments/assets/0120d8d3-6114-4ff0-aaba-08663396d660" />
+
 
 ## Connectivity Tests
 
@@ -140,7 +145,11 @@ All three returned **3 packets received, 0% packet loss**.
 | DNS | `ping -c 3 google.com` | Resolved and 3/3 replies ✅ |
 | Shared folder | `mount \| grep vboxsf` | Downloads mounted at `/media/sf_Downloads` ✅ |
 
-📸 *[Screenshot: ping results]*
+
+The gateway ping (10.0.0.1) worked first time, as shown in the Step 5 screenshot above. My first pings to 8.8.8.8 and google.com failed because my Mac had lost internet (see Problem 3). After connecting the Mac to a hotspot, both passed.
+
+<img width="1430" height="751" alt="6-ping-tests" src="https://github.com/user-attachments/assets/e0bed1d9-087e-4737-bb94-5546533755da" />
+
 
 ### Shared Folder Test
 
@@ -150,13 +159,15 @@ mount | grep vboxsf
 
 Output: `Downloads on /media/sf_Downloads type vboxsf (rw,nodev,relatime)`, confirming the Mac's Downloads folder is mounted inside Kali.
 
-📸 *[Screenshot: mount output]*
+<img width="1431" height="71" alt="7-mount" src="https://github.com/user-attachments/assets/c83159d0-30e2-4d7f-9ccb-4af5b73237f3" />
+
 
 ## Step 6: Snapshot
 
 After shutting Kali down (`sudo poweroff`), I took a snapshot named **Week 1 Lab Setup**. This is my clean baseline for future exercises, sitting after the `wazuh lab done V` snapshot.
 
-📸 *[Screenshot: snapshot tree]*
+<img width="1438" height="829" alt="8-snapshot" src="https://github.com/user-attachments/assets/8a39a197-5e2a-488a-a60f-48a6fb8c0f96" />
+
 
 ## Problems I Faced and How I Solved Them
 
@@ -191,7 +202,7 @@ eth0 stayed on *"getting IP configuration"*. Setting a static IP with `ipv4.dad-
 Cybersecurity Intern, Batch B084
 Networkwalks Academy
 
-LinkedIn: *[add your LinkedIn profile link]*
+LinkedIn:https://www.linkedin.com/in/esosa-ifeoluwa-emmanuel-4b2364349
 
 ## Project Information
 
