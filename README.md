@@ -191,10 +191,6 @@ eth0 stayed on *"getting IP configuration"*. Setting a static IP with `ipv4.dad-
 - Matching VM resources to the host's real hardware
 - Adapting Windows-based instructions to macOS
 
-## Tools & Resources
-
-- **VirtualBox:** <https://virtualbox.org/wiki/Downloads>
-- **Kali Linux:** <https://kali.org/get-kali>
 
 ## Author
 
