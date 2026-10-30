@@ -1,4 +1,4 @@
-# Cybersecurity Lab Environment Setup on MacOS
+# Cybersecurity Lab Environment Setup on macOS
 
 ## Project Overview
 
