@@ -146,7 +146,7 @@ All three returned **3 packets received, 0% packet loss**.
 | Shared folder | `mount \| grep vboxsf` | Downloads mounted at `/media/sf_Downloads` ✅ |
 
 
-The gateway ping (10.0.0.1) worked first time, as shown in the Step 5 screenshot above. My first pings to 8.8.8.8 and google.com failed because my Mac had lost internet (see Problem 3). After connecting the Mac to a hotspot, both passed.
+The gateway ping (10.0.0.1) worked on first attempt, as shown in the Step 5 screenshot above. My first pings to 8.8.8.8 and google.com failed because my Mac had lost internet (see Problem 3). After connecting the Mac to a hotspot, both passed.
 
 <img width="1430" height="751" alt="6-ping-tests" src="https://github.com/user-attachments/assets/e0bed1d9-087e-4737-bb94-5546533755da" />
 
